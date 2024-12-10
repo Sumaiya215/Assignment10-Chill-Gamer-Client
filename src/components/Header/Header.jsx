@@ -75,7 +75,7 @@ const Header = () => {
                             <div className='relative flex items-center'>
                             <img className="w-[40px] h-[40px] rounded-full cursor-pointer mr-3" src={user.photoURL} alt="user" 
                                 data-tooltip-content = {user.displayName} data-tooltip-id="userTooltip" />
-                                {/* Tooltip */}
+                              
                                 <ReactTooltip id="userTooltip" 
                                 place='bottom' type="dark" effect="solid">
                                 </ReactTooltip></div>
