@@ -1,7 +1,6 @@
 
 const Watchlist = ({watchlist , idx}) => {
 
-    // console.log(watchlist);
     const {name ,photo, description, rating, year, genre} = watchlist;
     return (
         <div>

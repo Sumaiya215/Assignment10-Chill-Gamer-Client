@@ -27,7 +27,7 @@ const Register = () => {
             return;
         }
 
-        //create user
+        
         createUser(email,password)
         .then(result =>{
             console.log(result.user);
@@ -51,8 +51,6 @@ const Register = () => {
             .catch(error => console.log('User profile update error'));  
     })
     .catch(error => 
-        // console.log('ERROR', error.message);
-        
     toast.error('User registration unsuccessful')
 );
 };

@@ -11,7 +11,7 @@ const GameWatchList = () => {
             fetch(`http://localhost:4500/watchList?email=${user.email}`)
                 .then((res) => res.json())
                 .then((data) =>
-                    // console.log(data);
+                   
                      setMyWatchLists(data)
             );
         }

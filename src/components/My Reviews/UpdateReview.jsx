@@ -22,7 +22,7 @@ const UpdateReview = () => {
         const updateReview = { photo, name, description, rating, year, genre, email, username };
         console.log(updateReview);
 
-        // send data to the server and database
+       
         fetch(`http://localhost:4500/review/${_id}`, {
             method: 'PUT',
             headers: {
@@ -48,7 +48,7 @@ const UpdateReview = () => {
             </div>
             <div className="card bg-base-100 w-full shrink-0 shadow-2xl mb-20">
                 <form onSubmit={handleReview} className="card-body">
-                    {/* form first row */}
+                    
                     <div className='flex flex-col lg:flex-row gap-5'>
                         <div className="form-control flex-1">
                             <label className="label">
@@ -63,7 +63,7 @@ const UpdateReview = () => {
                             <input type="text" defaultValue={name} name='name' placeholder="game title" className="input input-bordered" required />
                         </div>
                     </div>
-                    {/* form second row */}
+                    
                     <div className='flex flex-col lg:flex-row gap-5'>
                         <div className="form-control flex-1">
                             <label className="label">
@@ -79,7 +79,7 @@ const UpdateReview = () => {
                             <input type="number" defaultValue={rating} name='rating' placeholder="rating" className="input input-bordered" required />
                         </div>
                     </div>
-                    {/* form third row */}
+                   
                     <div className='flex flex-col lg:flex-row gap-5'>
                         <div className="form-control flex-1">
                             <label className="label">
