@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { useLoaderData } from 'react-router-dom';
 
 const AddReview = () => {
     const {user} = useContext(AuthContext);
-
+    
     const handleAddReview =e => {
         e.preventDefault();
         const form = e.target;
@@ -56,7 +57,7 @@ const AddReview = () => {
                         <label className="label">
                             <span className="label-text">Game Title</span>
                         </label>
-                        <input type="text" name='name' placeholder="game title" className="input input-bordered" required />
+                        <input type="text"  name='name' placeholder="game title" className="input input-bordered" required />
                     </div>
                 </div>
                 {/* form second row */}

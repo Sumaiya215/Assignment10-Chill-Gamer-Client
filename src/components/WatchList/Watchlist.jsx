@@ -5,8 +5,7 @@ const Watchlist = ({watchlist , idx}) => {
     const {name ,photo, description, rating, year, genre} = watchlist;
     return (
         <div>
-            
-            <div className="overflow-x-auto">
+              <div className="overflow-x-auto">
                 <table className="table">
                   
                     <thead>

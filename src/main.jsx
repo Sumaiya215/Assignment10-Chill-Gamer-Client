@@ -21,6 +21,7 @@ import Register from './components/Register/Register.jsx';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReviewDetails from './components/All Reviews/ReviewDetails.jsx';
+import UpdateReview from './components/My Reviews/UpdateReview.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,8 +53,12 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
       },
       {
+        path:'/updateReview/:id',
+        loader:({params}) => fetch(`http://localhost:4500/review/${params.id}`),
+        element:<PrivateRoute><UpdateReview></UpdateReview></PrivateRoute>
+      },
+      {
         path: '/myWatchList',
-      
         element: <PrivateRoute><GameWatchList></GameWatchList></PrivateRoute>
       },
       {

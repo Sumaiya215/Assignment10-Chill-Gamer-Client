@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 import Watchlist from './Watchlist';
 
@@ -9,7 +8,7 @@ const GameWatchList = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:4500/watchList?email=${encodeURIComponent(user.email)}`)
+            fetch(`http://localhost:4500/watchList?email=${user.email}`)
                 .then((res) => res.json())
                 .then((data) =>
                     // console.log(data);
