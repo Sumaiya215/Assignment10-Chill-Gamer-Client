@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const Review = ({ review }) => {
     const { _id, photo, name, description, rating, genre } = review;
     return (

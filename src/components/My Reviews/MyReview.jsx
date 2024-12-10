@@ -6,8 +6,7 @@ const MyReview = ({ review, idx , myReviews, setMyReviews}) => {
     const {_id, name, rating, year, genre } = review;
 
     const handleDelete = _id => {
-        // console.log(_id);
-
+       
         Swal.fire({
             title: "Are you sure?",
             text: "You review will be deleted!",

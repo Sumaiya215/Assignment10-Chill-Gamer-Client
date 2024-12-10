@@ -35,7 +35,7 @@ const UpdateReview = () => {
                 if (data.modifiedCount) {
                     console.log('successfully updated');
                     Swal.fire('Review updated successfully');
-                    // e.target.reset();
+                    e.target.reset();
                 }
             })
     }
