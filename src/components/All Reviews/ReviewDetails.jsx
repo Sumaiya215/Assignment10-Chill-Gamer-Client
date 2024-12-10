@@ -7,12 +7,11 @@ import { toast } from "react-toastify";
 const ReviewDetails = () => {
     const reviews = useLoaderData();
     const {user} = useContext(AuthContext);
-    // console.log(reviews);
+    
     const { _id,photo, name, description, rating, year, genre, email, username } = reviews;
 
     const handleWatchList = () =>{
-        // console.log(id);
-
+        
         const watchListItem = {
             photo : photo,
             name : name,
