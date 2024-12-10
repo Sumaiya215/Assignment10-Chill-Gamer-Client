@@ -9,6 +9,7 @@ const MyReviews = () => {
     useEffect(() => {
         if (user?.email) {
             fetch(`http://localhost:4500/reviews?email=${user.email}`)
+                
                 .then((res) => res.json())
                 .then((data) =>
                     // console.log(data);

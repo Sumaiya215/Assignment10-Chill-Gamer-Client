@@ -3,7 +3,7 @@ import logo from '../../assets/logo.avif'
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center bg-red-900 
+        <footer className="footer footer-center bg-slate-700 
         text-primary-content p-5 mt-12 mb-8 max-w-7xl mx-auto">
             <aside>
                 <img className='w-[40px]' src={logo} alt="" />
