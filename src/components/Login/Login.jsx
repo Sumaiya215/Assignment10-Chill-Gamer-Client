@@ -1,7 +1,8 @@
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
-
+import loginData from '../../assets/lottie/login.json'
+import Lottie from "lottie-react";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -41,11 +42,12 @@ const Login = () => {
 
     return (
         <div className="hero bg-base-100 min-h-screen mx">
-            <div className="hero-content max-w-[350px]  lg:w-[760px] mx-auto flex-col ">
-                <div className="text-center lg:text-left">
-                    <h3 className="text-3xl font-bold">Login now!</h3>
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left w-[600px]">
+                  <Lottie animationData={loginData}></Lottie> 
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <h3 className="text-3xl font-bold text-center mt-3">Login now!</h3>
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">

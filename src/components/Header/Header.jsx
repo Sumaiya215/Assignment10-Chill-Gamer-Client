@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.avif'
 import './Header.css'
@@ -7,6 +7,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip as ReactTooltip} from 'react-tooltip';
 
 const Header = () => {
+    const [theme, setTheme] = useState('light');
     const { user , signOutUser} = useContext(AuthContext);
     console.log(user);
 
@@ -18,6 +19,11 @@ const Header = () => {
         .catch(error => console.log('ERROR', error.message))
     }
 
+    const toggleTheme = () => {
+        const newTheme = theme === 'light'?'dark':'light';
+        setTheme(newTheme);
+        document.documentElement.setAttribute('data-theme', newTheme )
+    }
 
     const links = <>
         <li className="font-bold mr-2 "><NavLink to="/">Home</NavLink></li>
@@ -55,13 +61,19 @@ const Header = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-sky-800 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {links}
                     </ul>
                 </div>
 
                 <img className="w-[30px] rounded-full ml-3" src={logo} alt="" />
                 <span className='text-white font-bold text-xl ml-2'>Chill Gamer</span>
+                <button className='btn btn-xs ml-2' 
+                onClick={toggleTheme}>
+                        {
+                            theme ==="light"? "light": "dark"
+                        }
+                    </button>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
