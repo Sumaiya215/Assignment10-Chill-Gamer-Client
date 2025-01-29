@@ -8,7 +8,7 @@ const GameWatchList = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:4500/watchList?email=${user.email}`)
+            fetch(`https://chill-gamer-server-wheat.vercel.app/watchList?email=${user.email}`)
                 .then((res) => res.json())
                 .then((data) =>
                    
@@ -18,7 +18,7 @@ const GameWatchList = () => {
     }, [user?.email]);
 
     return (
-        <div className='max-w-5xl mx-auto mb-20 '>
+        <div className='w-4/5 lg:max-w-5xl mx-auto mb-20 '>
             <h2 className='text-center text-3xl font-bold 
             mt-12 mb-8'>My WatchLists</h2>
 

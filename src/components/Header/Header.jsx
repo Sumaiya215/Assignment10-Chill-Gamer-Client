@@ -73,11 +73,12 @@ const Header = () => {
                     user ?
                         <>
                             <div className='relative flex items-center'>
-                            <img className="w-[40px] h-[40px] rounded-full cursor-pointer mr-3" src={user.photoURL} alt="user" 
-                                data-tooltip-content = {user.displayName} data-tooltip-id="userTooltip" />
+                            <img className="w-[40px] h-[40px] rounded-full cursor-pointer mr-3" src={user?.photoURL} alt="user" 
+                                referrerPolicy="no-referrer"
+                                 data-tooltip-id="userTooltip" />
                               
                                 <ReactTooltip id="userTooltip" 
-                                place='bottom' type="dark" effect="solid">
+                                place='bottom' type="dark" effect="solid" content={user?.displayName}> 
                                 </ReactTooltip></div>
                             <a onClick={handleSignOut} className="btn mx-3">Log Out</a>
                         </>

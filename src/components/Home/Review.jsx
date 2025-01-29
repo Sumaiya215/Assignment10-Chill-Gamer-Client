@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Review = ({ review }) => {
-    const { _id, photo, name, description, rating, genre } = review;
+    const { _id, photo, name, description, rating, year, genre } = review;
     return (
         <div className="card bg-base-100 w-78 shadow-xl">
             <figure className="px-10 pt-10">
@@ -14,6 +14,7 @@ const Review = ({ review }) => {
                 <h2 className="card-title font-bold">{name}</h2>
                 <p className='text-base font-bold text-gray-400'>Description: {description}</p>
                 <p className='text-base font-semibold'>Rating: {rating}</p>
+                <p className='text-base font-semibold'>Genre: {year}</p>
                 <p className='text-base font-semibold'>Genre: {genre}</p>
                 <div className="flex justify-end flex-end">
                     <Link to={`/review/${_id}`}>

@@ -8,7 +8,7 @@ const MyReviews = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:4500/reviews?email=${user.email}`)
+            fetch(`https://chill-gamer-server-wheat.vercel.app/reviews?email=${user.email}`)
                 
                 .then((res) => res.json())
                 .then((data) =>
@@ -18,7 +18,7 @@ const MyReviews = () => {
     }, [user?.email]);
 
     return (
-        <div className='max-w-5xl mx-auto mb-20'>
+        <div className='w-4/5 lg:max-w-5xl mx-auto mb-20'>
            <h2 className='text-center mt-12 mb-8 text-3xl font-bold'>
             My Reviews </h2> 
             {

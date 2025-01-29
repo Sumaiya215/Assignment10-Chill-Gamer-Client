@@ -6,7 +6,7 @@ import banner4 from '../../assets/Banner4.avif'
 
 const Banner = () => {
     return (
-        <div className='md:max-w-3xl mx-auto'>
+        <div className='w-[70%] md:max-w-3xl mx-auto'>
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <img

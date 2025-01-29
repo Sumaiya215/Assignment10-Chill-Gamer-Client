@@ -21,7 +21,7 @@ const AddReview = () => {
         console.log(NewReview);
 
         // send data to the server and database
-         fetch('http://localhost:4500/addReview', {
+         fetch('https://chill-gamer-server-wheat.vercel.app/addReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const AddReview = () => {
             <h1 className="text-3xl font-bold">Add Review</h1>
             
         </div>
-        <div className="card bg-base-100 w-full shrink-0 shadow-2xl mb-20">
+        <div className="card bg-base-100 w-3/4 mx-auto shadow-2xl mb-20">
             <form onSubmit={handleAddReview} className="card-body">
                 {/* form first row */}
                 <div className='flex flex-col lg:flex-row gap-5'>

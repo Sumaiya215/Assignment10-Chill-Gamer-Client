@@ -6,7 +6,7 @@ const HighestRatedGames = () => {
     const highestReviews = useLoaderData();
 
     return (
-        <div className='mt-20 max-w-6xl mx-auto mb-20'>
+        <div className='w-4/5 mt-20 lg:max-w-6xl mx-auto mb-20'>
             <h2 className='text-3xl font-bold mb-6'>Highest Rated Games</h2>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>

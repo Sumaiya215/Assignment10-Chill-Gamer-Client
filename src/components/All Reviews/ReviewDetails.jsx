@@ -25,7 +25,7 @@ const ReviewDetails = () => {
 
         console.log(watchListItem);
         //
-        fetch("http://localhost:4500/watchList",{
+        fetch("https://chill-gamer-server-wheat.vercel.app/watchList",{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -41,12 +41,12 @@ const ReviewDetails = () => {
     }
 
     return (
-        <div className="max-w-6xl mx-auto mt-8 mb-12">
+        <div className="w-4/5 lg:max-w-6xl mx-auto mt-8 mb-12">
             <div className="card card-side max-w-5xl mx-auto bg-base-100 shadow-xl">
                 <figure>
                     <img
                         src={photo}
-                        className="p-8"
+                        className="p-8 "
                         alt="" />
                 </figure>
                 <div className="card-body">

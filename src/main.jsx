@@ -32,16 +32,16 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:() => fetch('http://localhost:4500/addReview/top')
+        loader:() => fetch('https://chill-gamer-server-wheat.vercel.app/addReview/top')
       },
       {
         path: '/allReviews',
         element: <AllReviews></AllReviews>,
-        loader:() => fetch('http://localhost:4500/addReview')
+        loader:() => fetch('https://chill-gamer-server-wheat.vercel.app/addReview')
       },
       {
         path:'/review/:id',
-        loader:({params}) => fetch(`http://localhost:4500/review/${params.id}`),
+        loader:({params}) => fetch(`https://chill-gamer-server-wheat.vercel.app/review/${params.id}`),
         element:<PrivateRoute><ReviewDetails></ReviewDetails></PrivateRoute>
       },
       {
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/updateReview/:id',
-        loader:({params}) => fetch(`http://localhost:4500/review/${params.id}`),
+        loader:({params}) => fetch(`https://chill-gamer-server-wheat.vercel.app/review/${params.id}`),
         element:<PrivateRoute><UpdateReview></UpdateReview></PrivateRoute>
       },
       {

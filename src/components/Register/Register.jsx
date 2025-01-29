@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const Register = () => {
     const navigate = useNavigate();
-    const {createUser ,signInWithGoogle} = useContext(AuthContext);
+    const {createUser, signInWithGoogle} = useContext(AuthContext);
     const [errorMessage, setErrorMessage] = useState('');
     
     const handleRegister = e => {
@@ -37,7 +37,7 @@ const Register = () => {
                 icon: 'success',
                 confirmButtonText: 'Ok'
             });
-            e.target.reset();
+           
         
         updateProfile(result.user,
             {
@@ -46,7 +46,9 @@ const Register = () => {
             })
             .then(() => {
                 console.log('user profile updated');
+                Swal.fire('Profile update Successful');
                 navigate('/');
+                e.target.reset();
             })
             .catch(error => console.log('User profile update error'));  
     })

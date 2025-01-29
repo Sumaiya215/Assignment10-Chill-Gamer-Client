@@ -23,7 +23,7 @@ const UpdateReview = () => {
         console.log(updateReview);
 
        
-        fetch(`http://localhost:4500/review/${_id}`, {
+        fetch(`https://chill-gamer-server-wheat.vercel.app/review/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const UpdateReview = () => {
                 <h1 className="text-3xl font-bold">Update Review</h1>
 
             </div>
-            <div className="card bg-base-100 w-full shrink-0 shadow-2xl mb-20">
+            <div className="card bg-base-100 w-3/4 mx-auto  shadow-2xl mb-20">
                 <form onSubmit={handleReview} className="card-body">
                     
                     <div className='flex flex-col lg:flex-row gap-5'>

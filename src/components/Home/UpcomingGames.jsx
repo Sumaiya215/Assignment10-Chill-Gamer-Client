@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const UpcomingGames = () => {
     return (
-        <div className='text-center max-w-6xl mx-auto mb-20'>
+        <div className='w-11/12 text-center lg:max-w-6xl mx-auto mb-20'>
             <h2 className='text-3xl font-bold mb-8'>Upcoming Games</h2>
             <Marquee pauseOnHover={true} className='space-x-10'>
                 <img className='w-[150px] h-[150px] mr-6' 

@@ -18,7 +18,7 @@ const MyReview = ({ review, idx , myReviews, setMyReviews}) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:4500/review/${_id}`, {
+                fetch(`https://chill-gamer-server-wheat.vercel.app/review/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
