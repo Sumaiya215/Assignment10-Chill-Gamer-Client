@@ -29,8 +29,7 @@
 
 ## **Live Site**
 
-Visit the live site: [Game Review Website](https://chill-gamer-netlify-a10.netlify.app/) [Game Review Server](https://chill-gamer-server-wheat.vercel.app/)
-
+Visit the live site: [Game Review Website](https://chill-gamer-netlify-a10.netlify.app/) 
 
 
 
